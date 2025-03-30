@@ -1,0 +1,232 @@
+%-------------------------
+% Hogwarts-themed Resume in Latex
+% Author : Adapted by ChatGPT
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.2in} % Adjust overall text height
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=11pt, rightmargin=-9pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\resumePublicationListStart}{\begin{itemize}[leftmargin=11pt]}
+\newcommand{\resumePublicationListEnd}{\end{itemize}\vspace{-10pt}}
+
+% For Heading
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeEducationSubheading}[5]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1}, \textit{\small#2} & \textbf{\small #3} \\
+      \textit{\small#4} & \textit{\small #5} \\
+    \end{tabular*}\vspace{-9pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{-2pt} \item
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+% For Item List
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+% For Publication List
+\newcommand{\resumePublicationItem}[1]{
+  \item\small{
+    {#1 \vspace{-7pt}}
+  }
+}
+
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Harry Potter} \\
+    \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ (+44) 1234 567890
+    ~ 
+    \href{mailto:harry.potter@hogwarts.edu}{\raisebox{-0.2\height}\faEnvelope\  \underline{harry.potter@hogwarts.edu}} 
+    ~ 
+    \href{https://linkedin.com/in/theboywholived}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/theboywholived}}  
+    ~ 
+    \href{https://github.com/harrypotter}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/harrypotter}}
+    \vspace{-8pt}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeEducationSubheading
+        {Hogwarts School of Witchcraft and Wizardry}{Scotland, UK}{Sept. 1991 -- June 1998}
+        {Master of Magic in Defense Against the Dark Arts}{Outstanding}
+    \resumeEducationSubheading
+        {Durmstrang Institute}{Northern Europe}{Summer 1997}
+        {Exchange Student, Dark Arts Research}{}
+    \resumeEducationSubheading
+        {Ilvermorny School of Witchcraft and Wizardry}{Massachusetts, USA}{July 1996 -- Aug. 1996}
+        {Visiting Intern, North American Spells Division}{}
+  \resumeSubHeadingListEnd
+
+%-----------PUBLICATION-----------
+\section{Publications}
+  \resumePublicationListStart
+    \resumePublicationItem{Hermione Granger, \textbf{Harry Potter}, Albus Dumbledore. Time-Turner Optimization in Multi-Dimensional Spells. To appear in \textit{Journal of Magical Theory}.}
+    \resumePublicationItem{\textbf{Harry Potter}, Ron Weasley. Advances in Basilisk Avoidance Techniques. \textit{Magical Creatures Quarterly}, 2002.}
+  \resumePublicationListEnd
+
+%-----------RESEARCH EXPERIENCE-----------
+\section{Research Experience}
+    \resumeSubHeadingListStart
+        \resumeSubheading{Magical Map Tracking and Mischief Monitoring}{Sept. 1996 -- May 1997}{Lead Researcher}{Room of Requirement, Hogwarts}
+      \resumeItemListStart
+        \resumeItem{Enhanced the Marauder’s Map to include real-time anomaly detection for unregistered magical beings within Hogwarts.}
+        \resumeItem{Collaborated with Fred and George Weasley to integrate prank-magic suppression zones.}
+        \resumeItem{Investigated magical GPS charms and their interference with castle enchantments.}
+      \resumeItemListEnd
+    \resumeSubHeadingListEnd
+    
+%-----------WORK-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+        {Order of the Phoenix}{May 1995 -- May 1998}
+        {Defense Strategist}{Grimmauld Place, London}
+      \resumeItemListStart
+        \resumeItem{Coordinated strategic missions to resist the Dark Lord’s forces.}
+        \resumeItem{Developed charm-based reconnaissance systems using Marauder’s Map technologies.}
+        \resumeItem{Collaborated with key magical entities including Aurors and magical creatures.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-16pt}
+
+%-----------PROJECTS-----------
+\section{Academic Contests}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading{\textbf{Triwizard Tournament (School Champion)}}{Oct. 1994 -- June 1995}
+  \resumeItemListStart
+    \resumeItem{Represented Hogwarts in the legendary inter-school magical competition alongside champions from Beauxbatons and Durmstrang.}
+    \resumeItem{Completed three perilous tasks involving dragons, underwater creatures, and a deadly enchanted maze.}
+    \resumeItem{Demonstrated advanced spellwork, problem-solving under pressure, and moral courage under extreme magical duress.}
+    \resumeItem{Received special recognition by the Ministry of Magic for bravery and sacrifice.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading{\textbf{Dumbledore’s Army Training Challenge}}{Jan. 1996 -- May 1997}
+  \resumeItemListStart
+    \resumeItem{Organized a student-led defense group to master practical combat magic amidst growing threats within Hogwarts.}
+    \resumeItem{Designed and taught advanced lessons in disarming, shielding, and stunning spells, including Expelliarmus and Protego.}
+    \resumeItem{Built peer-to-peer teaching network using Room of Requirement as a hidden learning space.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading{\textbf{Hogsmeade Magical Quiz Bowl}}{Nov. 1995}
+  \resumeItemListStart
+    \resumeItem{Competed in a wizardry-themed knowledge bowl against Ravenclaw and Slytherin teams.}
+    \resumeItem{Answered questions on topics such as magical law, wandlore, and potion interactions.}
+    \resumeItem{Secured first place with perfect score in the final charms round.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{Magical Skills}
+\begin{itemize}[leftmargin=0.0in, label={}]
+    \small{\item{
+     \textbf{Spells and Tools}{: Expelliarmus, Patronus Charm, Apparition, Invisibility Cloak, Marauder’s Map, Time Turner, Flying Broomstick, Polyjuice Potion} \\
+     \textbf{Technologies}{: Owl Post, Magical Maps, Goblin Banking Systems (Gringotts), Wizarding Wireless Network} \\
+     \textbf{Languages}{: Parseltongue, Gobbledegook (basic), English} \\
+    }}
+\end{itemize}
+
+\end{document}
